@@ -1,0 +1,442 @@
+/* General reset for better consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1f1f1f; /* Slightly lighter dark color for header */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add spacing between the image and navigation */
+  border-radius: 50%; /* Ensure the image is round */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff; /* Light text color */
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #333333; /* Slightly lighter background on hover */
+}
+
+.book-now {
+  background-color: #ff6600; /* Bright accent color for CTA */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.book-now:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+.hero {
+  height: 100vh;
+  background: url("/images/hero-background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text */
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #ff6600; /* Bright accent color for CTA */
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+
+.about-us,
+.amenities,
+.activities {
+  padding: 60px 40px;
+  background-color: #1f1f1f; /* Dark background to match the theme */
+  color: #ffffff;
+}
+
+.about-us .container,
+.amenities .container,
+.activities .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us h2,
+.amenities h2,
+.activities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.about-us p,
+.amenities p,
+.activities p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.activities .activity {
+  background-color: #2b2b2b; /* Slightly lighter dark background for cards */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.activities .activity:hover {
+  transform: translateY(-10px); /* Slight lift on hover for interactivity */
+}
+
+.activities .activity img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.activities .activity h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.activities .activity p {
+  font-size: 1rem;
+  color: #dddddd; /* Slightly lighter text for better readability */
+}
+.about-us,
+.amenities {
+  padding: 60px 40px;
+  background-color: #1f1f1f; /* Dark background to match the theme */
+  color: #ffffff;
+}
+
+.about-us .container,
+.amenities .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us h2,
+.amenities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.about-us p,
+.amenities p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.amenity {
+  background-color: #2b2b2b; /* Slightly lighter dark background for cards */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.amenity:hover {
+  transform: translateY(-10px); /* Slight lift on hover for interactivity */
+}
+
+.amenity img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.amenity h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.amenity p {
+  font-size: 1rem;
+  color: #dddddd; /* Slightly lighter text for better readability */
+}
+
+.about-us,
+.amenities,
+.activities,
+.gallery {
+  padding: 60px 40px;
+  background-color: #1f1f1f; /* Dark background to match the theme */
+  color: #ffffff;
+}
+
+.about-us .container,
+.amenities .container,
+.activities .container,
+.gallery .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us h2,
+.amenities h2,
+.activities h2,
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.about-us p,
+.amenities p,
+.activities p,
+.gallery p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-images img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.footer {
+  background-color: #1f1f1f; /* Dark background for footer */
+  padding: 60px 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+/* .footer-map {
+  /* Map styles */
+/* } */
+
+/* .footer-newsletter { */
+  /* Newsletter styles */
+/* } */ */
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-form input[type="email"] {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #ff6600; /* Accent color for button */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+.testimonials {
+  padding: 60px 0;
+  background-color: #1f1f1f; /* Dark background for testimonials */
+  color: #ffffff;
+}
+
+.testimonials .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.testimonial {
+  background-color: #2b2b2b; /* Slightly lighter dark background for testimonial cards */
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.testimonial h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.testimonial p:last-child {
+  font-style: italic;
+}
+
+.contact {
+  padding: 60px 0;
+  background-color: #1f1f1f; /* Dark background for contact section */
+  color: #ffffff;
+}
+
+.contact .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Accent color for headings */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #ff6600; /* Accent color for button */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
