@@ -113,38 +113,6 @@ nav a:hover {
   background-color: #e65c00; /* Darker shade on hover */
 }
 
-.about-us,
-.amenities,
-.activities {
-  padding: 60px 40px;
-  background-color: #1f1f1f; /* Dark background to match the theme */
-  color: #ffffff;
-}
-
-.about-us .container,
-.amenities .container,
-.activities .container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-us h2,
-.amenities h2,
-.activities h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff6600; /* Accent color for headings */
-}
-
-.about-us p,
-.amenities p,
-.activities p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
 .activities .activity {
   background-color: #2b2b2b; /* Slightly lighter dark background for cards */
   padding: 20px;
@@ -172,33 +140,6 @@ nav a:hover {
 .activities .activity p {
   font-size: 1rem;
   color: #dddddd; /* Slightly lighter text for better readability */
-}
-.about-us,
-.amenities {
-  padding: 60px 40px;
-  background-color: #1f1f1f; /* Dark background to match the theme */
-  color: #ffffff;
-}
-
-.about-us .container,
-.amenities .container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-us h2,
-.amenities h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff6600; /* Accent color for headings */
-}
-
-.about-us p,
-.amenities p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
 }
 
 .amenities-grid {
@@ -315,10 +256,9 @@ nav a:hover {
 /* } */
 
 /* .footer-newsletter { */
-  /* Newsletter styles */
-/* } */ */
-
-.newsletter-form {
+/* Newsletter styles */
+/* } */
+*/ .newsletter-form {
   display: flex;
 }
 
@@ -439,4 +379,36 @@ nav a:hover {
 
 .submit-button:hover {
   background-color: #e65c00; /* Darker shade on hover */
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b; /* Slightly lighter background for activity cards */
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px; /* Space between image and content */
+}
+
+.activity img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.activity-content {
+  flex: 1;
+  text-align: left;
+}
+
+.activity h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.activity p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
